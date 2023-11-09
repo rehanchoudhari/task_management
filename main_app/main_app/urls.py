@@ -39,6 +39,7 @@ api_url_patterns = [
                                 path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
                                 path('token/verify/', TokenVerifyView.as_view(), name='token_verify'),
                            ])),
+                           
     path('accounts/', include(user_api_router.router.urls)),
     path('tasks/', include(task_api_router.router.urls)),
     path('dashboard-report/', TaskCompletionReport.as_view(), name='dashBoardReport'),
